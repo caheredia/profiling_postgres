@@ -1,5 +1,6 @@
 services:
   python_image:
+    build: .
     container_name: python_image
     volumes:
       - .:/app
