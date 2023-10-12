@@ -1,5 +1,6 @@
 up: ## Docker compose up
-	docker compose up -d --build; docker compose exec python_image poetry install
+	docker compose up -d --build
+	# docker compose up -d --build; docker compose exec python_image poetry install
 down: ## Docker compose down
 	docker compose down --remove-orphans
 shell: ## Shell into container
@@ -10,6 +11,8 @@ test: ## Run static checks and tests
 	docker compose exec python_image flake8 src/ tests/;
 	docker compose exec python_image python -m unittest discover tests
 
+jupyter: ## Start jupyter server, run after `up`
+	docker compose exec python_image jupyter lab --allow-root --ip 0.0.0.0 --port 8001
 
 .PHONY: help
 help:

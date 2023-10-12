@@ -2,9 +2,8 @@
 name = "profiling-postgress"
 version = "0.1.0"
 description = ""
-authors = ["Your Name <you@example.com>"]
+authors = ["Cristian <tech+cristian@simplelogin.dedyn.io>"]
 readme = "README.md"
-packages = [{include = "profiling_postgress"}]
 
 [tool.poetry.dependencies]
 python = "^3.11"

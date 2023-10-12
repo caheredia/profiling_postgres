@@ -6,4 +6,6 @@ services:
       - .:/app
     working_dir: /app
     entrypoint: ["sleep", "infinity"]
+    ports:
+      - "8001:8001"
 
